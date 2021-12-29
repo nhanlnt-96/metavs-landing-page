@@ -2,7 +2,7 @@
 @import "../../styles/rwd";
 
 .header-comp {
-  //background-color: transparent;
+  background-color: transparent;
 
   @include smallScreen {
     .container {

@@ -204,7 +204,9 @@ function App() {
   // }, [blockchain.account]);
   
   return (
-    <MainLayout/>
+    <div className="App">
+      <MainLayout/>
+    </div>
     // <s.Screen>
     //   <s.Container
     //     flex={1}

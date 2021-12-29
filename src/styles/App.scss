@@ -1,0 +1,43 @@
+@import "./variables";
+@import "./rwd";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100vw;
+}
+
+.comp-height {
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+.comp-primary-btn {
+  font-family: TTOctoSquaresLight, sans-serif;
+  background-color: #ff0f7b;
+  color: #ffffff;
+  padding: 10px 0 10px 20px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+
+  &-icon {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 100%;
+    font-size: 30px;
+    margin-right: 5px;
+    margin-left: 15px;
+  }
+
+  @include smallScreen {
+    padding: 3px 0 3px 10px !important;
+  }
+  @include mobile {
+    padding: 5px 0 5px 10px;
+  }
+}

@@ -6,7 +6,7 @@ import {VscSearch} from "react-icons/all";
 
 const HeaderComp = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="header-comp">
+    <Navbar collapseOnSelect expand="lg" className="header-comp">
       <Container>
         <div className="header-comp-search">
           <input type="text" className="search-box" placeholder="Search"/>
