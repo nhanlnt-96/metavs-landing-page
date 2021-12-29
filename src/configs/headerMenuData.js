@@ -1,0 +1,30 @@
+export const headerMenuData = [
+  {
+    label:"ABOUT",
+    path:"#"
+  },
+  {
+    label:"COLLECTION",
+    path:"#"
+  },
+  {
+    label:"RARITY",
+    path:"#"
+  },
+  {
+    label:"ROADMAP",
+    path:"#"
+  },
+  {
+    label:"FAQ",
+    path:"#"
+  },
+  {
+    label:"TEAM",
+    path:"#"
+  },
+  {
+    label:"CONTACT",
+    path:"#"
+  },
+]

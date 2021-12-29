@@ -1,0 +1,114 @@
+@import "../../styles/variables";
+@import "../../styles/rwd";
+
+.header-comp {
+  //background-color: transparent;
+
+  @include smallScreen {
+    .container {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+}
+
+.header-comp {
+  &-search {
+    position: relative;
+
+    .search-box {
+      padding: 10px 30px 10px 10px;
+      outline: none;
+      border: none;
+      border-radius: 10px;
+      width: 300px;
+      background-color: #D0D2D7;
+
+      &::-webkit-input-placeholder {
+        color: #000000;
+      }
+
+      @include mobile {
+        width: unset;
+      }
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &-toggle-custom {
+    color: unset !important;
+    box-shadow: unset !important;
+    border-color: unset !important;
+  }
+}
+
+.header-comp-items {
+  width: 100%;
+
+  .header-item {
+    font-family: "Times New Roman", sans-serif;
+    font-weight: bold;
+    display: flex;
+    text-decoration: none;
+    max-width: 400px;
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      transform-origin: 0 bottom 0;
+      transform: scaleY(0);
+      transition: .4s ease-out;
+    }
+
+    &:hover {
+      .label {
+        color: #ffffff !important;
+      }
+
+      &:before {
+        transform: scaleY(1);
+      }
+    }
+
+    .label {
+      position: relative;
+      transition: .4s ease-out;
+    }
+
+    @include mobile {
+      padding: 10px;
+      &:first-child {
+        margin-top: 10px;
+      }
+      &:hover {
+        width: 100%;
+        @include flex-center;
+      }
+    }
+
+    @include tablet {
+      padding: 10px;
+      &:first-child {
+        margin-top: 10px;
+      }
+      &:hover {
+        width: 100%;
+        @include flex-center;
+      }
+    }
+  }
+}
