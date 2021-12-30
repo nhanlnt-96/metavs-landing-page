@@ -7,6 +7,18 @@
   &-phase-2, &-phase-3, &-phase-4 {
     margin-top: $margin-top-primary;
   }
+
+  &-phase-5 {
+    margin-top: 100px;
+
+    @include smallScreen {
+      margin-top: $margin-top-primary;
+    }
+
+    @include mobile {
+      margin-top: $margin-top-primary;
+    }
+  }
 }
 
 .phase-two-col-container {
@@ -252,9 +264,6 @@
     transform: unset;
     width: 100% !important;
   }
-}
-
-.roadmap-comp-phase-4 {
 }
 
 .roadmap-comp-content-header .content-phase {

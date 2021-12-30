@@ -1,26 +1,18 @@
 import React from "react";
 import {Col, Container, Row} from "react-bootstrap";
 import ArrowDown from "../../../assets/gifs/arrowDown.gif";
-import {BiRightArrowAlt} from "react-icons/all";
-import ScrollDown from "../../../assets/gifs/scrollDown.gif";
 import {useWindowSize} from "../../../shared/helpers";
-import {roadmapPhase4Data} from "../../../configs/roadmapPhase4Data";
+import {roadmapPhase5Data} from "../../../configs/roadmapPhase5Data";
+import ScrollDown from "../../../assets/gifs/scrollDown.gif";
 
-export const Phase4 = () => {
+export const Phase5 = () => {
   const currentScreenWidth = useWindowSize();
   return (
-    <Row className="roadmap-comp-phase-4">
+    <Row className="roadmap-comp-phase-5">
       <Container className="phase-three-col-container">
-        <Row className="phase-4-header">
-          <div className="roadmap-comp-content-header d-flex flex-column justify-content-center align-items-center">
-            <div className="content-phase-title">
-              <h6 className="title-item">metavs mmorpg<br/> play to earn game</h6>
-            </div>
-          </div>
-        </Row>
         <Row className="phase-three-col-content">
           {
-            roadmapPhase4Data.map((val, index) => (
+            roadmapPhase5Data.map((val, index) => (
               <Col xl={4} lg={index === 2 ? 12 : 6} md={index === 2 ? 12 : 6} key={index} className="content-item">
                 <div className="content-item-container">
                   <div className="content-item-title d-flex flex-column justify-content-center align-items-center">
@@ -46,6 +38,11 @@ export const Phase4 = () => {
               </Col>
             ))
           }
+        </Row>
+        <Row className="phase-scroll-down d-flex flex-column justify-content-center align-items-center">
+          <div className="scroll-img">
+            <img src={ScrollDown} alt="metavs-scroll-down"/>
+          </div>
         </Row>
       </Container>
     </Row>
