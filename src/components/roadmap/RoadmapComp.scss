@@ -92,60 +92,104 @@
   .phase-1-btn {
     margin-top: 30px;
   }
+}
 
-  .phase-1-scroll-down {
-    margin-top: 30px;
+.phase-2-container {
+  .phase-2-content {
+    margin-top: $margin-top-primary;
 
-    .scroll-img {
-      width: 80px;
-      margin-top: $margin-top-primary;
+    .content-item {
+      padding: 0 20px;
 
-      img {
-        width: 100%;
+      &-title {
+        .arrow-title {
+          width: 15%;
+        }
+
+        .title {
+          color: #6ce5e8;
+          font-family: TTOctoSquaresMedium, sans-serif;
+          font-size: 1.8rem;
+          text-align: center;
+          margin-top: 10px;
+          @include mobile {
+            font-size: 1.4rem;
+          }
+        }
+      }
+
+      &-detail {
+        min-height: 500px;
+        margin-top: $margin-top-primary;
+
+        .content, .sub-content {
+          font-size: 1.3rem;
+          line-height: 1.7rem;
+        }
+      }
+
+      &:first-child {
+        .arrow-title {
+          align-self: flex-end;
+          transform: rotate(90deg);
+          width: 50%;
+
+          @include mobile {
+            transform: unset;
+            width: 15%;
+            align-self: center;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        @include mobile {
+          margin: $margin-top-primary 0;
+        }
+      }
+
+      &:last-child {
+        @include tablet {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          .content-item-container {
+            width: 50%;
+          }
+        }
+
+        @include desktop {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          .content-item-container {
+            order: 2;
+          }
+        }
+
+        @include wide-desktop {
+          display: unset;
+        }
+
+        .arrow-title {
+          align-self: flex-start;
+          transform: scaleX(-1) rotate(90deg);
+          width: 50%;
+
+          @include mobile {
+            transform: unset;
+            width: 15%;
+            align-self: center;
+          }
+        }
       }
     }
   }
-}
 
-.phase-2-container .phase-2-content {
-  margin-top: $margin-top-primary;
+  .phase-2-btn {
+    margin-top: 30px;
 
-  .content-item {
-    margin: 20px;
-
-    &-title {
-      .arrow-title {
-        width: 15%;
-      }
-
-      .title {
-        color: #6ce5e8;
-        font-family: TTOctoSquaresMedium, sans-serif;
-        font-size: 1.8rem;
-        text-align: center;
-        margin-top: 10px;
-      }
-    }
-
-    &-detail {
-      height: 500px;
-      margin-top: $margin-top-primary;
-    }
-
-    &:first-child {
-      .arrow-title {
-        align-self: flex-end;
-        transform: rotate(90deg);
-        width: 50%;
-      }
-    }
-
-    &:last-child {
-      .arrow-title {
-        align-self: flex-start;
-        transform: scaleX(-1) rotate(90deg);
-        width: 50%;
-      }
+    .comp-primary-btn {
+      width: unset;
     }
   }
 }
@@ -172,6 +216,19 @@
     font-size: 2rem;
     margin-top: $margin-top-secondary;
     text-transform: uppercase;
+  }
+}
+
+.phase-scroll-down {
+  margin-top: 30px;
+
+  .scroll-img {
+    width: 80px;
+    margin-top: $margin-top-primary;
+
+    img {
+      width: 100%;
+    }
   }
 }
 

@@ -56,7 +56,7 @@ export const Phase1 = () => {
             </button>
           </Col>
         </Row>
-        <Row className="phase-1-scroll-down d-flex justify-content-center align-items-center">
+        <Row className="phase-scroll-down d-flex justify-content-center align-items-center">
           <div className="scroll-img">
             <img src={ScrollDown} alt="metavs-scroll-down"/>
           </div>
