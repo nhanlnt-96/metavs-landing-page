@@ -3,35 +3,13 @@
 
 .roadmap-comp {
   background-color: #000123;
+
+  &-phase-2 {
+    margin-top: $margin-top-primary;
+  }
 }
 
 .phase-1-container {
-  .phase-1-title .phase-1-title-item {
-    .content-header .content-phase {
-      &-number {
-        background: url("../../assets/gifs/arrowNeon.gif") no-repeat center;
-        background-size: cover;
-        width: 180px;
-        height: 180px;
-
-        .number-item {
-          color: #ffffff;
-          font-family: sans-serif;
-          font-size: 6rem;
-          animation: flicker 1.5s infinite alternate;
-        }
-      }
-
-      &-title {
-        text-align: center;
-        color: $primary-color;
-        font-family: TTOctoSquaresMedium, sans-serif;
-        font-size: 2rem;
-        margin-top: $margin-top-secondary;
-      }
-    }
-  }
-
   .phase-1-content {
     .content-img {
       &-container {
@@ -126,6 +104,74 @@
         width: 100%;
       }
     }
+  }
+}
+
+.phase-2-container .phase-2-content {
+  margin-top: $margin-top-primary;
+
+  .content-item {
+    margin: 20px;
+
+    &-title {
+      .arrow-title {
+        width: 15%;
+      }
+
+      .title {
+        color: #6ce5e8;
+        font-family: TTOctoSquaresMedium, sans-serif;
+        font-size: 1.8rem;
+        text-align: center;
+        margin-top: 10px;
+      }
+    }
+
+    &-detail {
+      height: 500px;
+      margin-top: $margin-top-primary;
+    }
+
+    &:first-child {
+      .arrow-title {
+        align-self: flex-end;
+        transform: rotate(90deg);
+        width: 50%;
+      }
+    }
+
+    &:last-child {
+      .arrow-title {
+        align-self: flex-start;
+        transform: scaleX(-1) rotate(90deg);
+        width: 50%;
+      }
+    }
+  }
+}
+
+.roadmap-comp-content-header .content-phase {
+  &-number {
+    background: url("../../assets/gifs/arrowNeon.gif") no-repeat center;
+    background-size: cover;
+    width: 180px;
+    height: 180px;
+
+    .number-item {
+      color: #ffffff;
+      font-family: sans-serif;
+      font-size: 6rem;
+      animation: flicker 1.5s infinite alternate;
+    }
+  }
+
+  &-title {
+    text-align: center;
+    color: $primary-color;
+    font-family: TTOctoSquaresMedium, sans-serif;
+    font-size: 2rem;
+    margin-top: $margin-top-secondary;
+    text-transform: uppercase;
   }
 }
 

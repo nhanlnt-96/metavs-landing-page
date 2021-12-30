@@ -14,7 +14,7 @@ export const Phase1 = () => {
         <Row className="phase-1-title">
           <Col xl={6} lg={5} md={4} sm={12}/>
           <Col xl={6} lg={7} md={8} sm={12} className="phase-1-title-item">
-            <div className="content-header d-flex flex-column justify-content-center align-items-center">
+            <div className="roadmap-comp-content-header d-flex flex-column justify-content-center align-items-center">
               <div className="content-phase-number d-flex justify-content-center align-items-center">
                 <h6 className="number-item">1</h6>
               </div>
