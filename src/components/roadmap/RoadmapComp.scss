@@ -95,9 +95,6 @@
         @include mobile {
           width: 100%;
           padding-left: 25px;
-          .item {
-            text-align: justify;
-          }
         }
 
         @include tablet {
@@ -106,6 +103,27 @@
             font-size: 1.4rem;
           }
         }
+      }
+    }
+
+    .content-btn {
+      margin-top: 30px;
+    }
+  }
+
+  .phase-1-btn {
+    margin-top: 30px;
+  }
+
+  .phase-1-scroll-down {
+    margin-top: 30px;
+
+    .scroll-img {
+      width: 80px;
+      margin-top: $margin-top-primary;
+
+      img {
+        width: 100%;
       }
     }
   }
