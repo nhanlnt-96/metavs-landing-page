@@ -4,13 +4,13 @@
 .roadmap-comp {
   background-color: #000123;
 
-  &-phase-2 {
+  &-phase-2, &-phase-3 {
     margin-top: $margin-top-primary;
   }
 }
 
-.phase-1-container {
-  .phase-1-content {
+.phase-two-col-container {
+  .phase-two-col-content {
     .content-img {
       &-container {
         .img-left-side {
@@ -89,7 +89,7 @@
     }
   }
 
-  .phase-1-btn {
+  .phase-two-col-btn {
     margin-top: 30px;
   }
 }
@@ -194,6 +194,66 @@
   }
 }
 
+.roadmap-comp-phase-3 .content-img-container {
+  .img-bottom-side {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include smallScreen {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    @include mobile {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  .img-item {
+    background: url("../../assets/gifs/circleAnimate.gif") no-repeat center;
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+
+    .img {
+      width: 70%;
+      height: 70%;
+      border-radius: 100%;
+      overflow: hidden;
+      border: 4px solid #D0D2D7;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    @include smallScreen {
+      width: 150px !important;
+      height: 150px !important;
+    }
+
+    @include mobile {
+      width: 180px;
+      height: 180px;
+    }
+  }
+
+  @include tablet {
+    transform: unset;
+    margin: $margin-top-primary 0;
+  }
+
+  @include desktop {
+    transform: scale(.7);
+  }
+
+  @include wide-desktop {
+    transform: unset;
+    width: 100% !important;
+  }
+}
+
 .roadmap-comp-content-header .content-phase {
   &-number {
     background: url("../../assets/gifs/arrowNeon.gif") no-repeat center;
@@ -216,6 +276,9 @@
     font-size: 2rem;
     margin-top: $margin-top-secondary;
     text-transform: uppercase;
+    @include smallScreen {
+      font-size: 1.5rem;
+    }
   }
 }
 

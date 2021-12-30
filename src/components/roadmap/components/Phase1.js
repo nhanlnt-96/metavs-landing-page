@@ -10,7 +10,7 @@ import ScrollDown from "../../../assets/gifs/scrollDown.gif";
 export const Phase1 = () => {
   return (
     <Row className="roadmap-comp-phase-1">
-      <Container fluid className="phase-1-container">
+      <Container fluid className="phase-two-col-container">
         <Row className="phase-1-title">
           <Col xl={6} lg={5} md={4} sm={12}/>
           <Col xl={6} lg={7} md={8} sm={12} className="phase-1-title-item">
@@ -25,7 +25,7 @@ export const Phase1 = () => {
             </div>
           </Col>
         </Row>
-        <Row className="phase-1-content">
+        <Row className="phase-two-col-content">
           <Col xl={6} lg={5} md={4} sm={12} className="content-img d-flex justify-content-center align-items-center">
             <Row className="content-img-container">
               <Col className="img-left-side">
@@ -48,7 +48,7 @@ export const Phase1 = () => {
             </div>
           </Col>
         </Row>
-        <Row className="phase-1-btn">
+        <Row className="phase-two-col-btn">
           <Col xl={6} lg={5} md={4} sm={12}/>
           <Col xl={6} lg={7} md={8} sm={12} className="d-flex justify-content-center align-items-center">
             <button className="comp-primary-btn">SHOW MORE

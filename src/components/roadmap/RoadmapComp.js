@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container} from "react-bootstrap";
-import {Phase1, Phase2} from "./components";
+import {Phase1, Phase2, Phase3} from "./components";
 
 import './RoadmapComp.scss';
 
@@ -10,6 +10,7 @@ const RoadmapComp = () => {
       <Container className="roadmap-comp-container">
         <Phase1/>
         <Phase2/>
+        <Phase3/>
       </Container>
     </Container>
   );
