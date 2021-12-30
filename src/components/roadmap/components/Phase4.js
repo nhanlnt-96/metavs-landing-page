@@ -1,29 +1,26 @@
-import React, {useLayoutEffect, useState} from "react";
+import React from "react";
 import {Col, Container, Row} from "react-bootstrap";
-import {roadmapPhase2Data} from "../../../configs/roadmapPhase2Data";
+import ArrowDown from "../../../assets/gifs/arrowDown.gif";
 import {BiRightArrowAlt} from "react-icons/all";
 import ScrollDown from "../../../assets/gifs/scrollDown.gif";
-import ArrowDown from '../../../assets/gifs/arrowDown.gif';
 import {useWindowSize} from "../../../shared/helpers";
+import {roadmapPhase4Data} from "../../../configs/roadmapPhase4Data";
 
-export const Phase2 = () => {
+export const Phase4 = () => {
   const currentScreenWidth = useWindowSize();
   return (
     <Row className="roadmap-comp-phase-2">
       <Container className="phase-three-col-container">
-        <Row className="phase-2-header">
+        <Row className="phase-3-header">
           <div className="roadmap-comp-content-header d-flex flex-column justify-content-center align-items-center">
-            <div className="content-phase-number d-flex justify-content-center align-items-center">
-              <h6 className="number-item">2</h6>
-            </div>
             <div className="content-phase-title">
-              <h6 className="title-item">NFT marketplace<br/> with native token<br/> and staking - MetaVS token</h6>
+              <h6 className="title-item">metavs mmorpg<br/> play to earn game</h6>
             </div>
           </div>
         </Row>
         <Row className="phase-three-col-content">
           {
-            roadmapPhase2Data.map((val, index) => (
+            roadmapPhase4Data.map((val, index) => (
               <Col xl={4} lg={index === 2 ? 12 : 6} md={index === 2 ? 12 : 6} key={index} className="content-item">
                 <div className="content-item-container">
                   <div className="content-item-title d-flex flex-column justify-content-center align-items-center">
@@ -49,16 +46,6 @@ export const Phase2 = () => {
               </Col>
             ))
           }
-        </Row>
-        <Row className="phase-three-col-btn d-flex justify-content-center align-items-center">
-          <button className="comp-primary-btn">SHOW MORE
-            <BiRightArrowAlt className="comp-primary-btn-icon"/>
-          </button>
-        </Row>
-        <Row className="phase-scroll-down d-flex flex-column justify-content-center align-items-center">
-          <div className="scroll-img">
-            <img src={ScrollDown} alt="metavs-scroll-down"/>
-          </div>
         </Row>
       </Container>
     </Row>

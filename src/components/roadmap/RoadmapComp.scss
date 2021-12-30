@@ -4,7 +4,7 @@
 .roadmap-comp {
   background-color: #000123;
 
-  &-phase-2, &-phase-3 {
+  &-phase-2, &-phase-3, &-phase-4 {
     margin-top: $margin-top-primary;
   }
 }
@@ -94,8 +94,8 @@
   }
 }
 
-.phase-2-container {
-  .phase-2-content {
+.phase-three-col-container {
+  .phase-three-col-content {
     margin-top: $margin-top-primary;
 
     .content-item {
@@ -185,7 +185,7 @@
     }
   }
 
-  .phase-2-btn {
+  .phase-three-col-btn {
     margin-top: 30px;
 
     .comp-primary-btn {
@@ -252,6 +252,9 @@
     transform: unset;
     width: 100% !important;
   }
+}
+
+.roadmap-comp-phase-4 {
 }
 
 .roadmap-comp-content-header .content-phase {
