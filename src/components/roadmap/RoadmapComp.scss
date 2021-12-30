@@ -1,3 +1,131 @@
+@import '../../styles/variables';
+@import '../../styles/rwd';
+
 .roadmap-comp {
   background-color: #000123;
+}
+
+.phase-1-container {
+  .phase-1-title .phase-1-title-item {
+    .content-header .content-phase {
+      &-number {
+        background: url("../../assets/gifs/arrowNeon.gif") no-repeat center;
+        background-size: cover;
+        width: 180px;
+        height: 180px;
+
+        .number-item {
+          color: #ffffff;
+          font-family: sans-serif;
+          font-size: 6rem;
+          animation: flicker 1.5s infinite alternate;
+        }
+      }
+
+      &-title {
+        text-align: center;
+        color: $primary-color;
+        font-family: TTOctoSquaresMedium, sans-serif;
+        font-size: 2rem;
+        margin-top: $margin-top-secondary;
+      }
+    }
+  }
+
+  .phase-1-content {
+    .content-img {
+      &-container {
+        .img-left-side {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          width: 100%;
+          display: grid;
+          grid-template-rows: repeat(2, 1fr);
+
+          img {
+            width: 100%;
+
+            &:first-child {
+              height: 100%;
+            }
+          }
+        }
+
+        .img-right-side {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          width: 100%;
+
+          img {
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+          }
+        }
+
+        @include wide-desktop {
+          width: 80%;
+        }
+      }
+
+      @include mobile {
+        margin-top: $margin-top-primary;
+        margin-bottom: $margin-top-primary;
+      }
+    }
+
+    .content-detail {
+      .content-desc {
+        margin: $margin-top-primary 0;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 50px;
+        width: 90%;
+
+        .item {
+          font-size: 1.5rem;
+          line-height: 2rem;
+          display: block;
+
+          &:first-letter {
+            font-size: 2rem;
+          }
+        }
+
+        @include mobile {
+          width: 100%;
+          padding-left: 25px;
+          .item {
+            text-align: justify;
+          }
+        }
+
+        @include tablet {
+          padding-left: 25px;
+          .item {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// animation
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 0 0 2px $primary-color,
+    0 0 11px $primary-color,
+    0 0 19px $primary-color,
+    0 0 40px $primary-color,
+    0 0 80px $primary-color,
+    0 0 90px $primary-color,
+    0 0 100px $primary-color,
+    0 0 150px $primary-color;
+
+  }
+
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
 }

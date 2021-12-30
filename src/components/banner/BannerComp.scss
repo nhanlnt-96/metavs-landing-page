@@ -5,7 +5,7 @@
   background: url("../../assets/gifs/bannerBg.gif") no-repeat center;
   background-size: cover;
   position: relative;
-  min-height: 70vh;
+  min-height: 100vh;
 
   &-blur-bg {
     background-color: rgba(255, 255, 255, .5);
@@ -16,7 +16,7 @@
   }
 
   &-container {
-    min-height: calc(70vh - 61px);
+    min-height: calc(100vh - 61px);
     position: relative;
   }
 }

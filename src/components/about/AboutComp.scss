@@ -12,25 +12,8 @@
 .about-comp-items .content-item {
   .content-desc {
     margin-top: $margin-top-primary;
-    padding: 25px;
     text-align: center;
     width: 80%;
-    border-radius: 50px;
-
-    .content {
-      color: #ffffff;
-      font-family: TTOctoSquaresLight, sans-serif;
-      font-size: 1rem;
-      line-height: 1.5rem;
-
-      &:not(:last-child) {
-        margin-top: $margin-top-secondary;
-      }
-
-      @include tablet {
-        font-size: 1.2rem;
-      }
-    }
 
     @include mobile {
       width: 100%;

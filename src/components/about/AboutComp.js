@@ -14,10 +14,10 @@ const AboutComp = () => {
                     <Col xl={6} lg={8} md={12} sm={12}
                          className="content-item d-flex flex-column justify-content-center align-items-center">
                         <h6 className="comp-primary-title">ABOUT</h6>
-                        <div className="content-desc border-neon-shadow">
+                        <div className="content-desc comp-border-neon-shadow">
                             {
                                 aboutUseData.map((val, index) => (
-                                    <p key={index} className="content">{val}</p>
+                                    <p key={index} className="content comp-content-box">{val}</p>
                                 ))
                             }
                         </div>
