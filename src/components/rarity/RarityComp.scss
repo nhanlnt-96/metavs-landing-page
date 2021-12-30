@@ -1,0 +1,118 @@
+@import "../../styles/variables";
+@import "../../styles/rwd";
+
+.rarity-comp {
+  background-color: #000123;
+
+  .rarity-comp-score {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 15px;
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+  }
+}
+
+.rarity-comp-score {
+  .content-items .item {
+    background-color: #D0D2D7;
+    width: 100%;
+    min-height: 300px;
+    box-sizing: content-box;
+    position: relative;
+    padding: 15px 15px 65px;
+    clip-path: polygon(100% 0, 100% 100%, 50% 95%, 0 100%, 0 0);
+
+    .header {
+      min-height: 80px;
+
+      .header-title {
+        color: #ff1616;
+        text-shadow: 0.05678059em -0.01735957em 0em rgb(0, 255, 255), -0.05678059em 0.01735957em 0em rgb(255, 0, 255);
+        font-family: TTOctoSquaresMedium, sans-serif;
+        font-size: 2.3rem;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+
+    .avatar, .name, .rank {
+      margin-top: $margin-top-primary;
+    }
+
+    .avatar {
+      &-item {
+        width: 150px;
+
+        div[data-test-id="CircularProgressbarWithChildren__children"] {
+          height: 85% !important;
+          width: 85% !important;
+          margin-top: unset !important;
+          overflow: hidden;
+          border-radius: 100%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          left: 50%;
+        }
+
+      }
+    }
+
+    .name .user-name {
+      font-family: TTOctoSquaresLight, sans-serif;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .score {
+      text-align: center;
+      margin-top: 30px;
+
+      .file-number {
+        margin-top: $margin-top-secondary;
+      }
+
+      .score-title {
+        font-family: TTOctoSquaresLight, sans-serif;
+      }
+
+      .desc {
+        font-family: TTOctoSquaresMedium, sans-serif;
+        margin-top: 10px;
+        font-weight: bolder;
+      }
+    }
+
+    .rank {
+      text-align: center;
+
+      .rank-title {
+        font-family: TTOctoSquaresLight, sans-serif;
+      }
+
+      .desc {
+        font-family: TTOctoSquaresMedium, sans-serif;
+        font-weight: bolder;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.rarity-comp-scroll {
+  .scroll-img {
+    width: 80px;
+    margin-top: $margin-top-primary;
+
+    img {
+      width: 100%;
+    }
+  }
+}
