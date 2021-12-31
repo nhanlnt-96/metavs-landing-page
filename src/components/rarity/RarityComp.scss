@@ -115,69 +115,77 @@
   }
 }
 
-.rarity-comp-timeline .rarity-comp-timeline-container {
-  .items {
-    min-height: 400px;
+.rarity-comp-timeline .items {
+  flex-direction: row;
+  min-height: 900px;
 
-    .item {
-      @include flex-center;
-      flex-direction: column;
+  .item-container {
+    flex: 1;
+    padding-left: 0;
+    padding-right: 0;
 
-      &-header {
-        @include flex-center;
-        text-align: center;
+    .item-child {
+      padding: 0 10px;
+
+      .header {
+        border-radius: 20px;
+        padding: 20px 10px;
         width: 100%;
-        height: 150px;
-        border-radius: 15px;
-        padding: 10px;
+        height: 130px;
 
         .title {
-          font-family: MuliBold, sans-serif;
-          font-weight: bold;
-          font-size: 2.5rem;
           color: #ffffff;
+          text-align: center;
+          font-family: MuliBold, sans-serif;
+          font-size: 2.5rem;
+          font-weight: bolder;
+
+          &:last-child {
+            margin-top: $margin-top-secondary;
+          }
         }
       }
 
-      &-content {
-        padding: 10px;
+      .content {
         background-color: #ededed;
-        min-height: calc(400px - 150px);
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
         width: 85%;
-        @include flex-center;
-        flex-direction: column;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        text-align: center;
+        padding: 10px;
+        min-height: 300px;
 
-        .content {
-          text-align: center;
-          font-family: sans-serif;
+        .detail {
+          font-family: "Times New Roman", sans-serif;
+          font-weight: bold;
           font-size: 1.8rem;
+
+          &:not(:last-child) {
+            margin-bottom: $margin-top-secondary;
+          }
         }
       }
     }
 
-    .item-empty {
-      @include mobile {
-        display: none;
-      }
-      @include tablet {
-        display: none;
-      }
+    &:nth-child(even) {
+      display: flex;
+      justify-content: center;
+      align-self: flex-end;
     }
 
     @include mobile {
-      &:last-child {
-        margin-top: $margin-top-primary;
-      }
-      .item:nth-child(3), .item:nth-child(4) {
-        margin-top: $margin-top-primary;
+      &:not(:last-child) {
+        margin-bottom: $margin-top-primary;
       }
     }
 
     @include tablet {
-      &:last-child {
-        margin-top: $margin-top-primary;
+      flex-wrap: wrap;
+      flex: unset;
+      width: 50%;
+      &:nth-child(even) {
+        display: unset;
+        align-self: unset;
       }
     }
   }
