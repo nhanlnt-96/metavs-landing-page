@@ -9,6 +9,9 @@ const RarityComp = () => {
   return (
     <Container fluid className="rarity-comp comp-height">
       <Container className="rarity-comp-container">
+        <Row className="rarity-comp-title d-flex justify-content-center align-items-center">
+          <h6 className="comp-primary-title">Rarity</h6>
+        </Row>
         <RarityScore/>
         <Row className="rarity-comp-scroll d-flex flex-column justify-content-center align-items-center">
           <div className="scroll-img">

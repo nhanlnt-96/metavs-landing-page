@@ -4,7 +4,12 @@
 .rarity-comp {
   background-color: #000123;
 
-  .rarity-comp-score {
+  &-title {
+    text-align: center;
+    margin: $margin-top-primary 0;
+  }
+
+  &-score {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -19,7 +24,7 @@
     }
   }
 
-  .rarity-comp-timeline {
+  &-timeline {
     margin-top: $margin-top-primary;
   }
 }
