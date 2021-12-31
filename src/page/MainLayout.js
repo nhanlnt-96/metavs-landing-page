@@ -5,6 +5,7 @@ import AboutComp from "../components/about/AboutComp";
 import RoadmapComp from "../components/roadmap/RoadmapComp";
 import RarityComp from "../components/rarity/RarityComp";
 import FaqsComp from "../components/faqs/FaqsComp";
+import TeamComp from "../components/team/TeamComp";
 
 const MainLayout = () => {
   return (
@@ -23,6 +24,9 @@ const MainLayout = () => {
       </Row>
       <Row>
         <FaqsComp/>
+      </Row>
+      <Row>
+        <TeamComp/>
       </Row>
     </Container>
   );
