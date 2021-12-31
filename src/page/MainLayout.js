@@ -6,6 +6,7 @@ import RoadmapComp from "../components/roadmap/RoadmapComp";
 import RarityComp from "../components/rarity/RarityComp";
 import FaqsComp from "../components/faqs/FaqsComp";
 import TeamComp from "../components/team/TeamComp";
+import FooterComp from "../components/footer/FooterComp";
 
 const MainLayout = () => {
   return (
@@ -27,6 +28,9 @@ const MainLayout = () => {
       </Row>
       <Row>
         <TeamComp/>
+      </Row>
+      <Row>
+        <FooterComp/>
       </Row>
     </Container>
   );

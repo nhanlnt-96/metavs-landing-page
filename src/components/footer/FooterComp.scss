@@ -1,0 +1,82 @@
+@import "../../styles/variables";
+@import "../../styles/rwd";
+
+.footer-comp {
+  background-color: #000123;
+
+  &-container {
+    margin: $margin-top-primary 0;
+  }
+}
+
+.footer-comp-content .content-left-side {
+  .content-title .comp-primary-title {
+    font-size: 3rem;
+    @include smallScreen{
+      font-size: 2.5rem;
+    }
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  .contact-desc {
+    margin-top: $margin-top-primary;
+
+    .contact-direct {
+      .contact-item, .email-item {
+        font-family: TTOctoSquaresMedium, sans-serif;
+        font-size: 1.5rem;
+        @include smallScreen{
+          font-size: 1.2rem;
+        }
+      }
+
+      .contact-item {
+        color: #ffffff;
+      }
+
+      .email-item {
+        margin-top: $margin-top-primary;
+        color: #ff0f7b;
+        font-weight: bold;
+      }
+    }
+
+    .contact-social {
+      margin-top: $margin-top-primary;
+      color: #ffffff;
+
+      svg {
+        font-size: 3rem;
+
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+
+        @include smallScreen{
+          font-size: 2rem;
+        }
+      }
+
+      @include mobile {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.footer-comp-content .content-right-side .footer-img {
+  width: 80%;
+
+  img {
+    width: 100%;
+  }
+
+  @include mobile {
+    margin-top: $margin-top-primary;
+  }
+  @include tablet {
+    width: 100%;
+  }
+}
