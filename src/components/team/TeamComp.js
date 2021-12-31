@@ -17,14 +17,14 @@ const TeamComp = () => {
             <div className="line line-left-to-right"/>
           </div>
         </Row>
-        <Row className="team-comp-content">
+        <Row className="team-comp-content d-flex justify-content-center align-items-center">
           {
             teamData.map((val, index) => (
               <Col lg={3} md={3} sm={12} key={index} className="item">
                 <div className="ava-img">
                   <img src={val.avatar} alt={val.title}/>
                 </div>
-                <div className="member-title">
+                <div className="member-title d-flex justify-content-center align-items-center">
                   <p className="name">{val.title}</p>
                 </div>
               </Col>
