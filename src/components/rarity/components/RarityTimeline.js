@@ -9,7 +9,7 @@ export const RarityTimeline = () => {
         <Row className="items">
           {
             rarityTimelineData.map((val, index) => (
-              <div key={index} className="item-container">
+              <div data-aos="zoom-in" key={index} className="item-container">
                 <div className="item-child d-flex flex-column justify-content-center align-items-center">
                   <div className="header d-flex flex-column justify-content-center align-items-center"
                        style={{backgroundColor: val.color}}>

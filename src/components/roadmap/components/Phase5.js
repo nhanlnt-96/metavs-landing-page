@@ -10,7 +10,8 @@ export const Phase5 = () => {
   return (
     <Row className="roadmap-comp-phase-5">
       <Container className="phase-three-col-container">
-        <Row className="phase-three-col-content">
+        <Row data-aos="fade-up"
+             data-aos-duration="3000" className="phase-three-col-content">
           {
             roadmapPhase5Data.map((val, index) => (
               <Col xl={4} lg={index === 2 ? 12 : 6} md={index === 2 ? 12 : 6} key={index} className="content-item">

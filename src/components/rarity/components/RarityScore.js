@@ -9,7 +9,7 @@ export const RarityScore = () => {
     <Row className="rarity-comp-score">
       {
         rarityScoreData.map((val, index) => (
-          <div className="content-items">
+          <div data-aos="fade-up" className="content-items">
             <div className="item">
               <div className="header d-flex justify-content-center align-items-center">
                 <h6 className="header-title">{val.title}</h6>

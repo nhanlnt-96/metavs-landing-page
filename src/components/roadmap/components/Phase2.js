@@ -11,7 +11,7 @@ export const Phase2 = () => {
   return (
     <Row className="roadmap-comp-phase-2">
       <Container className="phase-three-col-container">
-        <Row className="phase-2-header">
+        <Row data-aos="zoom-in" className="phase-2-header">
           <div className="roadmap-comp-content-header d-flex flex-column justify-content-center align-items-center">
             <div className="content-phase-number d-flex justify-content-center align-items-center">
               <h6 className="number-item">2</h6>
@@ -24,7 +24,7 @@ export const Phase2 = () => {
         <Row className="phase-three-col-content">
           {
             roadmapPhase2Data.map((val, index) => (
-              <Col xl={4} lg={index === 2 ? 12 : 6} md={index === 2 ? 12 : 6} key={index} className="content-item">
+              <Col data-aos="zoom-in" xl={4} lg={index === 2 ? 12 : 6} md={index === 2 ? 12 : 6} key={index} className="content-item">
                 <div className="content-item-container">
                   <div className="content-item-title d-flex flex-column justify-content-center align-items-center">
                     <img className="arrow-title" src={currentScreenWidth < 768 ? ArrowDown : val.icon}
@@ -50,12 +50,12 @@ export const Phase2 = () => {
             ))
           }
         </Row>
-        <Row className="phase-three-col-btn d-flex justify-content-center align-items-center">
+        <Row data-aos="zoom-out-up" className="phase-three-col-btn d-flex justify-content-center align-items-center">
           <button className="comp-primary-btn">SHOW MORE
             <BiRightArrowAlt className="comp-primary-btn-icon"/>
           </button>
         </Row>
-        <Row className="phase-scroll-down d-flex flex-column justify-content-center align-items-center">
+        <Row data-aos="fade-up" className="phase-scroll-down d-flex flex-column justify-content-center align-items-center">
           <div className="scroll-img">
             <img src={ScrollDown} alt="metavs-scroll-down"/>
           </div>

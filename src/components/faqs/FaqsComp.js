@@ -11,7 +11,7 @@ const FaqsComp = () => {
   return (
     <Container fluid className="faqs-comp">
       <Container className="faqs-comp-container">
-        <Row className="faqs-comp-title d-flex justify-content-center align-items-center">
+        <Row data-aos="zoom-in" className="faqs-comp-title d-flex justify-content-center align-items-center">
           <h6 className="comp-primary-title">FAQ</h6>
         </Row>
         <Row className="faqs-comp-content">
@@ -20,11 +20,11 @@ const FaqsComp = () => {
               <div key={index}
                    className={`item-container d-flex align-items-center ${(index % 2 !== 0) && 'justify-content-end'}`}>
                 <div className="item-detail">
-                  <div className="item-question">
+                  <div data-aos="fade-rigth" className="item-question">
                     <img src={QuestionImg} alt="faqs-metavs"/>
                     <p className="question">{val.question}</p>
                   </div>
-                  <div className="item-answer">
+                  <div data-aos="fade-left" className="item-answer">
                     <img src={AnswerImg} alt="faqs-metavs"/>
                     <p className="answer">{val.answer}</p>
                   </div>

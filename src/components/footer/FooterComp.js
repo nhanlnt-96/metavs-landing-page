@@ -10,7 +10,8 @@ const FooterComp = () => {
     <Container fluid className="footer-comp comp-height d-flex justify-content-center align-items-center">
       <Container className="footer-comp-container">
         <Row className="footer-comp-content">
-          <Col lg={6} md={6} sm={12} className="content-left-side d-flex flex-column justify-content-center">
+          <Col data-aos="fade-left" lg={6} md={6} sm={12} className="content-left-side d-flex flex-column
+            justify-content-center">
             <div className="content-title">
               <h6 className="comp-primary-title">CONTACT</h6>
             </div>
@@ -28,7 +29,8 @@ const FooterComp = () => {
               </div>
             </div>
           </Col>
-          <Col lg={6} md={6} sm={12} className="content-right-side d-flex justify-content-center align-items-center">
+          <Col data-aos="fade-right" lg={6} md={6} sm={12} className="content-right-side d-flex justify-content-center
+            align-items-center">
             <div className="footer-img">
               <img src={FooterImg} alt="metavs-footer"/>
             </div>

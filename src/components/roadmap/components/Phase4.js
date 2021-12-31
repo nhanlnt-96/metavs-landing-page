@@ -11,7 +11,7 @@ export const Phase4 = () => {
   return (
     <Row className="roadmap-comp-phase-4">
       <Container className="phase-three-col-container">
-        <Row className="phase-4-header">
+        <Row data-aos="zoom-out-up" className="phase-4-header">
           <div className="roadmap-comp-content-header d-flex flex-column justify-content-center align-items-center">
             <div className="content-phase-title">
               <h6 className="title-item">metavs mmorpg<br/> play to earn game</h6>
@@ -21,7 +21,7 @@ export const Phase4 = () => {
         <Row className="phase-three-col-content">
           {
             roadmapPhase4Data.map((val, index) => (
-              <Col xl={4} lg={index === 2 ? 12 : 6} md={index === 2 ? 12 : 6} key={index} className="content-item">
+              <Col data-aos="zoom-out-right" xl={4} lg={index === 2 ? 12 : 6} md={index === 2 ? 12 : 6} key={index} className="content-item">
                 <div className="content-item-container">
                   <div className="content-item-title d-flex flex-column justify-content-center align-items-center">
                     <img className="arrow-title" src={currentScreenWidth < 768 ? ArrowDown : val.icon}
