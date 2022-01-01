@@ -20,18 +20,18 @@ const MainLayout = () => {
       <Row>
         <RoadmapComp/>
       </Row>
-      <Row>
-        <RarityComp/>
-      </Row>
-      <Row>
-        <FaqsComp/>
-      </Row>
-      <Row>
-        <TeamComp/>
-      </Row>
-      <Row>
-        <FooterComp/>
-      </Row>
+      {/*<Row>*/}
+      {/*  <RarityComp/>*/}
+      {/*</Row>*/}
+      {/*<Row>*/}
+      {/*  <FaqsComp/>*/}
+      {/*</Row>*/}
+      {/*<Row>*/}
+      {/*  <TeamComp/>*/}
+      {/*</Row>*/}
+      {/*<Row>*/}
+      {/*  <FooterComp/>*/}
+      {/*</Row>*/}
     </Container>
   );
 };
