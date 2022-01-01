@@ -10,7 +10,7 @@ import FooterComp from "../components/footer/FooterComp";
 
 const MainLayout = () => {
   return (
-    <Container fluid className="main-layout">
+    <Container fluid className="main-layout" style={{overflow: "hidden"}}>
       <Row>
         <BannerComp/>
       </Row>
@@ -23,15 +23,15 @@ const MainLayout = () => {
       <Row>
         <RarityComp/>
       </Row>
-      {/*<Row>*/}
-      {/*  <FaqsComp/>*/}
-      {/*</Row>*/}
-      {/*<Row>*/}
-      {/*  <TeamComp/>*/}
-      {/*</Row>*/}
-      {/*<Row>*/}
-      {/*  <FooterComp/>*/}
-      {/*</Row>*/}
+      <Row>
+        <FaqsComp/>
+      </Row>
+      <Row>
+        <TeamComp/>
+      </Row>
+      <Row>
+        <FooterComp/>
+      </Row>
     </Container>
   );
 };
