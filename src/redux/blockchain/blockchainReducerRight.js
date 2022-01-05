@@ -6,14 +6,14 @@ const initialState = {
   errorMsg: "",
 };
 
-const blockchainReducer = (state = initialState, action) => {
+const blockchainReducerRight = (state = initialState, action) => {
   switch (action.type) {
-    case "CONNECTION_REQUEST":
+    case "CONNECTION_REQUEST_RIGHT":
       return {
         ...initialState,
         loading: true,
       };
-    case "CONNECTION_SUCCESS":
+    case "CONNECTION_SUCCESS_RIGHT":
       return {
         ...state,
         loading: false,
@@ -21,13 +21,13 @@ const blockchainReducer = (state = initialState, action) => {
         smartContract: action.payload.smartContract,
         web3: action.payload.web3,
       };
-    case "CONNECTION_FAILED":
+    case "CONNECTION_FAILED_RIGHT":
       return {
         ...initialState,
         loading: false,
         errorMsg: action.payload,
       };
-    case "UPDATE_ACCOUNT":
+    case "UPDATE_ACCOUNT_RIGHT":
       return {
         ...state,
         account: action.payload.account,
@@ -37,4 +37,4 @@ const blockchainReducer = (state = initialState, action) => {
   }
 };
 
-export default blockchainReducer;
+export default blockchainReducerRight;

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Col, Container, Row} from "react-bootstrap";
 import {FaFacebookF, FaInstagram, SiTwitter, SiYoutube} from "react-icons/all";
-import FooterImg from '../../assets/imgs/footerImg.svg';
+import FooterImg from '../../assets/gifs/bannerBg.gif';
 
 import './FooterComp.scss';
 

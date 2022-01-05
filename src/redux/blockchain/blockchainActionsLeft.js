@@ -2,38 +2,38 @@
 import Web3EthContract from "web3-eth-contract";
 import Web3 from "web3";
 // log
-import { fetchData } from "../data/dataActions";
+import { fetchDataLeft } from "../data/dataActionsLeft";
 
-const connectRequest = () => {
+const connectRequestLeft = () => {
   return {
-    type: "CONNECTION_REQUEST",
+    type: "CONNECTION_REQUEST_LEFT",
   };
 };
 
-const connectSuccess = (payload) => {
+const connectSuccessLeft = (payload) => {
   return {
-    type: "CONNECTION_SUCCESS",
+    type: "CONNECTION_SUCCESS_LEFT",
     payload: payload,
   };
 };
 
-const connectFailed = (payload) => {
+const connectFailedLeft = (payload) => {
   return {
-    type: "CONNECTION_FAILED",
+    type: "CONNECTION_FAILED_LEFT",
     payload: payload,
   };
 };
 
-const updateAccountRequest = (payload) => {
+const updateAccountRequestLeft = (payload) => {
   return {
-    type: "UPDATE_ACCOUNT",
+    type: "UPDATE_ACCOUNT_LEFT",
     payload: payload,
   };
 };
 
-export const connect = () => {
+export const connectLeft = () => {
   return async (dispatch) => {
-    dispatch(connectRequest());
+    dispatch(connectRequestLeft());
     const abiResponse = await fetch("/config/abi.json", {
       headers: {
         "Content-Type": "application/json",
@@ -66,7 +66,7 @@ export const connect = () => {
             CONFIG.CONTRACT_ADDRESS
           );
           dispatch(
-            connectSuccess({
+            connectSuccessLeft({
               account: accounts[0],
               smartContract: SmartContractObj,
               web3: web3,
@@ -74,27 +74,27 @@ export const connect = () => {
           );
           // Add listeners start
           ethereum.on("accountsChanged", (accounts) => {
-            dispatch(updateAccount(accounts[0]));
+            dispatch(updateAccountLeft(accounts[0]));
           });
           ethereum.on("chainChanged", () => {
             window.location.reload();
           });
           // Add listeners end
         } else {
-          dispatch(connectFailed(`Change network to ${CONFIG.NETWORK.NAME}.`));
+          dispatch(connectFailedLeft(`Change network to ${CONFIG.NETWORK.NAME}.`));
         }
       } catch (err) {
-        dispatch(connectFailed("Something went wrong."));
+        dispatch(connectFailedLeft("Something went wrong."));
       }
     } else {
-      dispatch(connectFailed("Install Metamask."));
+      dispatch(connectFailedLeft("Install Metamask."));
     }
   };
 };
 
-export const updateAccount = (account) => {
+export const updateAccountLeft = (account) => {
   return async (dispatch) => {
-    dispatch(updateAccountRequest({ account: account }));
-    dispatch(fetchData(account));
+    dispatch(updateAccountRequestLeft({ account: account }));
+    dispatch(fetchDataLeft(account));
   };
 };

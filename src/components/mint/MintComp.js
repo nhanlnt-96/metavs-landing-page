@@ -15,10 +15,10 @@ const MintComp = () => {
           <h6 className="comp-primary-title">Mint</h6>
         </Row>
         <Row className="mint-comp-content d-grid">
-          <div className="mint-left-side d-flex justify-content-center align-items-center">
+          <div data-aos="fade-right" className="mint-left-side d-flex justify-content-center align-items-center">
             <LeftSideButton/>
           </div>
-          <div className="mint-right-side d-flex justify-content-center align-items-center">
+          <div data-aos="fade-left" className="mint-right-side d-flex justify-content-center align-items-center">
             <RightSideButton/>
           </div>
         </Row>

@@ -1,33 +1,33 @@
 // log
 import store from "../store";
 
-const fetchDataRequest = () => {
+const fetchDataRequestLeft = () => {
   return {
-    type: "CHECK_DATA_REQUEST",
+    type: "CHECK_DATA_REQUEST_LEFT",
   };
 };
 
-const fetchDataSuccess = (payload) => {
+const fetchDataSuccessLeft = (payload) => {
   return {
-    type: "CHECK_DATA_SUCCESS",
+    type: "CHECK_DATA_SUCCESS_LEFT",
     payload: payload,
   };
 };
 
-const fetchDataFailed = (payload) => {
+const fetchDataFailedLeft = (payload) => {
   return {
-    type: "CHECK_DATA_FAILED",
+    type: "CHECK_DATA_FAILED_LEFT",
     payload: payload,
   };
 };
 
-export const fetchData = () => {
+export const fetchDataLeft = () => {
   return async (dispatch) => {
-    dispatch(fetchDataRequest());
+    dispatch(fetchDataRequestLeft());
     try {
       let totalSupply = await store
         .getState()
-        .blockchain.smartContract.methods.totalSupply()
+        .blockchainLeft.smartContract.methods.totalSupply()
         .call();
       // let cost = await store
       //   .getState()
@@ -35,14 +35,14 @@ export const fetchData = () => {
       //   .call();
 
       dispatch(
-        fetchDataSuccess({
+        fetchDataSuccessLeft({
           totalSupply,
           // cost,
         })
       );
     } catch (err) {
       console.log(err);
-      dispatch(fetchDataFailed("Could not load data from contract."));
+      dispatch(fetchDataFailedLeft("Could not load data from contract."));
     }
   };
 };

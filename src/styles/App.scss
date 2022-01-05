@@ -29,6 +29,7 @@
   border: none;
   outline: none;
   font-size: 1.2rem;
+  transition: .3s ease-in;
 
   &-icon {
     background-color: #ffffff;
@@ -37,6 +38,11 @@
     font-size: 30px;
     margin-right: 5px;
     margin-left: 15px;
+  }
+
+  &:hover {
+    background-color: #ffffff;
+    color: #000000;
   }
 
   @include smallScreen {

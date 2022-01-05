@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {fetchData} from "../../../redux/data/dataActions";
 import * as s from "../../../styles/globalStyles";
-import {connect} from "../../../redux/blockchain/blockchainActions";
 import {
   ResponsiveWrapper,
   StyledButton,
@@ -11,11 +9,13 @@ import {
   truncate
 } from "./stylesComponent";
 import {BiRightArrowAlt} from "react-icons/all";
+import {fetchDataRight} from "../../../redux/data/dataActionsRight";
+import {connectRight} from "../../../redux/blockchain/blockchainActionsRight";
 
 const RightSideButton = () => {
   const dispatch = useDispatch();
-  const blockchain = useSelector((state) => state.blockchain);
-  const data = useSelector((state) => state.data);
+  const blockchain = useSelector((state) => state.blockchainRight);
+  const data = useSelector((state) => state.dataRight);
   const [claimingNft, setClaimingNft] = useState(false);
   const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`);
   const [mintAmount, setMintAmount] = useState(1);
@@ -66,7 +66,7 @@ const RightSideButton = () => {
           `WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`
         );
         setClaimingNft(false);
-        dispatch(fetchData(blockchain.account));
+        dispatch(fetchDataRight(blockchain.account));
       });
   };
   
@@ -88,7 +88,7 @@ const RightSideButton = () => {
   
   const getData = () => {
     if (blockchain.account !== "" && blockchain.smartContract !== null) {
-      dispatch(fetchData(blockchain.account));
+      dispatch(fetchDataRight(blockchain.account));
     }
   };
   
@@ -190,7 +190,7 @@ const RightSideButton = () => {
                 <s.SpacerSmall/>
                 <button className="comp-primary-btn" onClick={(e) => {
                   e.preventDefault();
-                  dispatch(connect());
+                  dispatch(connectRight());
                   getData();
                 }}>CONNECT
                   <BiRightArrowAlt className="comp-primary-btn-icon"/>

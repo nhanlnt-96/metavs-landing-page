@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {fetchData} from "../../../redux/data/dataActions";
+import {fetchDataLeft} from "../../../redux/data/dataActionsLeft";
 import * as s from "../../../styles/globalStyles";
-import {connect} from "../../../redux/blockchain/blockchainActions";
+import {connectLeft} from "../../../redux/blockchain/blockchainActionsLeft";
 import {
   ResponsiveWrapper,
   StyledButton,
@@ -14,8 +14,8 @@ import {BiRightArrowAlt} from "react-icons/all";
 
 const LeftSideButton = () => {
   const dispatch = useDispatch();
-  const blockchain = useSelector((state) => state.blockchain);
-  const data = useSelector((state) => state.data);
+  const blockchain = useSelector((state) => state.blockchainLeft);
+  const data = useSelector((state) => state.dataLeft);
   const [claimingNft, setClaimingNft] = useState(false);
   const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`);
   const [mintAmount, setMintAmount] = useState(1);
@@ -66,7 +66,7 @@ const LeftSideButton = () => {
           `WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`
         );
         setClaimingNft(false);
-        dispatch(fetchData(blockchain.account));
+        dispatch(fetchDataLeft(blockchain.account));
       });
   };
   
@@ -88,7 +88,7 @@ const LeftSideButton = () => {
   
   const getData = () => {
     if (blockchain.account !== "" && blockchain.smartContract !== null) {
-      dispatch(fetchData(blockchain.account));
+      dispatch(fetchDataLeft(blockchain.account));
     }
   };
   
@@ -190,7 +190,7 @@ const LeftSideButton = () => {
                 <s.SpacerSmall/>
                 <button className="comp-primary-btn" onClick={(e) => {
                   e.preventDefault();
-                  dispatch(connect());
+                  dispatch(connectLeft());
                   getData();
                 }}>CONNECT
                   <BiRightArrowAlt className="comp-primary-btn-icon"/>

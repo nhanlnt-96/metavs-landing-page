@@ -6,16 +6,16 @@ const initialState = {
   errorMsg: "",
 };
 
-const dataReducer = (state = initialState, action) => {
+const dataReducerLeft = (state = initialState, action) => {
   switch (action.type) {
-    case "CHECK_DATA_REQUEST":
+    case "CHECK_DATA_REQUEST_LEFT":
       return {
         ...state,
         loading: true,
         error: false,
         errorMsg: "",
       };
-    case "CHECK_DATA_SUCCESS":
+    case "CHECK_DATA_SUCCESS_LEFT":
       return {
         ...state,
         loading: false,
@@ -24,7 +24,7 @@ const dataReducer = (state = initialState, action) => {
         error: false,
         errorMsg: "",
       };
-    case "CHECK_DATA_FAILED":
+    case "CHECK_DATA_FAILED_LEFT":
       return {
         ...initialState,
         loading: false,
@@ -36,4 +36,4 @@ const dataReducer = (state = initialState, action) => {
   }
 };
 
-export default dataReducer;
+export default dataReducerLeft;

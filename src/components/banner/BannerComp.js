@@ -23,7 +23,9 @@ const BannerComp = () => {
           </Col>
           <Col data-aos="fade-left" lg={5} md={5} sm={12}
                className="banner-comp-btn d-flex flex-column justify-content-center align-items-center">
-            <button className="comp-primary-btn">SHOP NOW
+            <button className="comp-primary-btn" onClick={() => {
+              window.location.href = "#mint"
+            }}>SHOP NOW
               <BiRightArrowAlt className="comp-primary-btn-icon"/>
             </button>
           </Col>
