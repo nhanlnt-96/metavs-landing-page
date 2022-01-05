@@ -1,0 +1,52 @@
+@import "../../styles/variables";
+@import "../../styles/rwd";
+
+.mint-comp {
+  background-color: #000000;
+  min-height: 100vh;
+  padding: 24px 0;
+
+  &-title {
+    text-align: center;
+    margin: $margin-top-primary 0;
+    height: 40px;
+  }
+
+  &-timeline {
+    margin-top: $margin-top-primary;
+  }
+}
+
+.mint-comp-content {
+  min-height: calc(100vh - 40px - 48px - 48px);
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+  .mint-left-side, .mint-right-side {
+    min-height: 50vh;
+    background-color: rgba(63, 63, 64, .5);
+    border-radius: 10px;
+
+    @include smallScreen {
+      .supply-total {
+        font-size: 30px !important;
+      }
+      .cost-detail{
+        font-size: 20px !important;
+      }
+    }
+
+    @include mobile {
+      .supply-total {
+        font-size: 40px !important;
+      }
+    }
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+

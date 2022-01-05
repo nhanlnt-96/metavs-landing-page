@@ -28,6 +28,11 @@
   src: url(Muli-Bold.woff) format("woff");
 }
 
+@font-face {
+  font-family: MainFont;
+  src: url(MainFont.woff2) format("woff");
+}
+
 @mixin flex-center {
   display: flex;
   justify-content: center;

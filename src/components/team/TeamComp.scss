@@ -2,8 +2,9 @@
 @import "../../styles/rwd";
 
 .team-comp {
-  background: url("../../assets/imgs/bgTeam.jpeg") no-repeat center;
-  background-size: cover;
+  //background: url("../../assets/imgs/bgTeam.jpeg") no-repeat center;
+  //background-size: cover;
+  background-color: #000000;
 
   &-title {
     text-align: center;
@@ -67,7 +68,7 @@
 
     .item .member-title {
       margin-top: $margin-top-secondary;
-      background-color: #7935ff;
+      background-color: #3F3F40;
       padding: 10px;
       text-align: center;
       min-height: 25px;

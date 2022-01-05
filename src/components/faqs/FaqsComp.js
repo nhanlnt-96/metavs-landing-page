@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container, Row} from "react-bootstrap";
 import {faqsData} from "../../configs/faqsData";
-import QuestionImg from '../../assets/imgs/messageBox1.png';
+import QuestionImg from '../../assets/imgs/messageBox1-grey.png';
 import AnswerImg from '../../assets/imgs/messageBox2.png';
 
 import './FaqsComp.scss';

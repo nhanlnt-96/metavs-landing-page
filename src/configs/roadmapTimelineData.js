@@ -1,4 +1,4 @@
-export const rarityTimelineData = [
+export const roadmapTimelineData = [
   {
     title: ["Q1", "2022"],
     content: ["MetaMan NFT Launch"],

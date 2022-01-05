@@ -1,298 +1,104 @@
-@import '../../styles/variables';
-@import '../../styles/rwd';
+@import "../../styles/variables";
+@import "../../styles/rwd";
 
 .roadmap-comp {
-  background-color: #000123;
+  background-color: #000000;
 
-  &-phase-2, &-phase-3, &-phase-4 {
-    margin-top: $margin-top-primary;
+  &-title {
+    text-align: center;
+    margin: $margin-top-primary 0;
   }
 
-  &-phase-5 {
-    margin-top: 100px;
-
-    @include smallScreen {
-      margin-top: $margin-top-primary;
-    }
-
-    @include mobile {
-      margin-top: $margin-top-primary;
-    }
+  &-timeline {
+    margin-top: $margin-top-primary;
   }
 }
 
-.phase-two-col-container {
-  .phase-two-col-content {
-    .content-img {
-      &-container {
-        .img-left-side {
-          padding-left: 0 !important;
-          padding-right: 0 !important;
-          width: 100%;
-          display: grid;
-          grid-template-rows: repeat(2, 1fr);
+.roadmap-comp-timeline .items {
+  flex-direction: row;
+  min-height: 900px;
 
-          img {
-            width: 100%;
+  .item-container {
+    flex: 1;
+    padding-left: 0;
+    padding-right: 0;
+
+    .item-child {
+      padding: 0 10px;
+
+      .header {
+        border-radius: 20px;
+        padding: 20px 10px;
+        width: 100%;
+        height: 130px;
+        background-color: #3F3F40;
+
+        .title {
+          color: #ffffff;
+          text-align: center;
+          font-family: MainFont, sans-serif;
+          font-size: 2.5rem;
+          font-weight: bolder;
+
+          &:last-child {
+            margin-top: $margin-top-secondary;
           }
-        }
-
-        .img-right-side {
-          padding-left: 0 !important;
-          padding-right: 0 !important;
-          width: 100%;
-
-          img {
-            width: 100%;
-            object-fit: cover;
-            height: 100%;
-          }
-        }
-
-        @include wide-desktop {
-          width: 80%;
         }
       }
 
-      @include mobile {
-        margin-top: $margin-top-primary;
+      .content {
+        background-color: #ededed;
+        width: 85%;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        text-align: center;
+        padding: 10px;
+        min-height: 300px;
+
+        .detail {
+          font-family: "Kanit", sans-serif;
+          font-weight: bold;
+          font-size: 1.8rem;
+
+          &:not(:last-child) {
+            margin-bottom: $margin-top-secondary;
+          }
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      display: flex;
+      justify-content: center;
+      align-self: flex-end;
+    }
+
+    @include mobile {
+      flex-wrap: wrap;
+      flex: unset;
+      width: 100%;
+      &:nth-child(even) {
+        display: unset;
+        align-self: unset;
+      }
+      &:not(:last-child) {
         margin-bottom: $margin-top-primary;
       }
     }
 
-    .content-detail {
-      .content-desc {
-        margin: $margin-top-primary 0;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        padding-left: 50px;
-        width: 90%;
-
-        .item {
-          font-size: 1.5rem;
-          line-height: 2rem;
-          display: block;
-
-          &:first-letter {
-            font-size: 2rem;
-          }
-        }
-
-        @include mobile {
-          width: 100%;
-          padding-left: 25px;
-        }
-
-        @include tablet {
-          padding-left: 25px;
-          .item {
-            font-size: 1.4rem;
-          }
-        }
+    @include tablet {
+      flex-wrap: wrap;
+      flex: unset;
+      width: 50%;
+      &:nth-child(even) {
+        display: unset;
+        align-self: unset;
       }
-    }
-
-    .content-btn {
-      margin-top: 30px;
-    }
-  }
-
-  .phase-two-col-btn {
-    margin-top: 30px;
-  }
-}
-
-.phase-three-col-container {
-  .phase-three-col-content {
-    margin-top: $margin-top-primary;
-
-    .content-item {
-      padding: 0 20px;
-
-      &-title {
-        .arrow-title {
-          width: 15%;
-        }
-
-        .title {
-          color: #6ce5e8;
-          font-family: TTOctoSquaresMedium, sans-serif;
-          font-size: 1.8rem;
-          text-align: center;
-          margin-top: 10px;
-          @include mobile {
-            font-size: 1.4rem;
-          }
-        }
-      }
-
-      &-detail {
-        min-height: 500px;
-        margin-top: $margin-top-primary;
-
-        .content, .sub-content {
-          font-size: 1.3rem;
-          line-height: 1.7rem;
-        }
-      }
-
-      &:first-child {
-        .arrow-title {
-          align-self: flex-end;
-          transform: rotate(90deg);
-          width: 50%;
-
-          @include mobile {
-            transform: unset;
-            width: 15%;
-            align-self: center;
-          }
-        }
-      }
-
-      &:nth-child(2) {
-        @include mobile {
-          margin: $margin-top-primary 0;
-        }
-      }
-
-      &:last-child {
-        @include tablet {
-          width: 100%;
-          display: flex;
-          justify-content: flex-end;
-          .content-item-container {
-            width: 50%;
-          }
-        }
-
-        @include desktop {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          .content-item-container {
-            order: 2;
-          }
-        }
-
-        @include wide-desktop {
-          display: unset;
-        }
-
-        .arrow-title {
-          align-self: flex-start;
-          transform: scaleX(-1) rotate(90deg);
-          width: 50%;
-
-          @include mobile {
-            transform: unset;
-            width: 15%;
-            align-self: center;
-          }
-        }
-      }
-    }
-  }
-
-  .phase-three-col-btn {
-    margin-top: 30px;
-
-    .comp-primary-btn {
-      width: unset;
     }
   }
 }
 
-.roadmap-comp-phase-3 .content-img-container {
-  .img-bottom-side {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    @include smallScreen {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
-    @include mobile {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
-  }
-
-  .img-item {
-    background: url("../../assets/gifs/circleAnimate.gif") no-repeat center;
-    background-size: cover;
-    width: 250px;
-    height: 250px;
-
-    .img {
-      width: 70%;
-      height: 70%;
-      border-radius: 100%;
-      overflow: hidden;
-      border: 4px solid #D0D2D7;
-
-      img {
-        object-fit: cover;
-        width: 100%;
-      }
-    }
-
-    @include smallScreen {
-      width: 150px !important;
-      height: 150px !important;
-    }
-
-    @include mobile {
-      width: 180px;
-      height: 180px;
-    }
-  }
-
-  @include tablet {
-    transform: unset;
-    margin: $margin-top-primary 0;
-  }
-
-  @include desktop {
-    transform: scale(.7);
-  }
-
-  @include wide-desktop {
-    transform: unset;
-    width: 100% !important;
-  }
-}
-
-.roadmap-comp-content-header .content-phase {
-  &-number {
-    background: url("../../assets/gifs/arrowNeon.gif") no-repeat center;
-    background-size: cover;
-    width: 180px;
-    height: 180px;
-
-    .number-item {
-      color: #ffffff;
-      font-family: sans-serif;
-      font-size: 6rem;
-      animation: flicker 1.5s infinite alternate;
-    }
-  }
-
-  &-title {
-    text-align: center;
-    color: $primary-color;
-    font-family: TTOctoSquaresMedium, sans-serif;
-    font-size: 2rem;
-    margin-top: $margin-top-secondary;
-    text-transform: uppercase;
-    @include smallScreen {
-      font-size: 1.5rem;
-    }
-  }
-}
-
-.phase-scroll-down {
-  margin-top: 30px;
-
+.roadmap-comp-scroll {
   .scroll-img {
     width: 80px;
     margin-top: $margin-top-primary;
@@ -300,24 +106,5 @@
     img {
       width: 100%;
     }
-  }
-}
-
-// animation
-@keyframes flicker {
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
-    text-shadow: 0 0 2px $primary-color,
-    0 0 11px $primary-color,
-    0 0 19px $primary-color,
-    0 0 40px $primary-color,
-    0 0 80px $primary-color,
-    0 0 90px $primary-color,
-    0 0 100px $primary-color,
-    0 0 150px $primary-color;
-
-  }
-
-  20%, 24%, 55% {
-    text-shadow: none;
   }
 }

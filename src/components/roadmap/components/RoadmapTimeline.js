@@ -1,18 +1,17 @@
 import React from "react";
 import {Col, Container, Row} from "react-bootstrap";
-import {rarityTimelineData} from "../../../configs/rarityTimelineData";
+import {roadmapTimelineData} from "../../../configs/roadmapTimelineData";
 
-export const RarityTimeline = () => {
+export const RoadmapTimeline = () => {
   return (
-    <Row className="rarity-comp-timeline">
-      <Container className="rarity-comp-timeline-container">
+    <Row className="roadmap-comp-timeline">
+      <Container className="roadmap-comp-timeline-container">
         <Row className="items">
           {
-            rarityTimelineData.map((val, index) => (
+            roadmapTimelineData.map((val, index) => (
               <div data-aos="zoom-in" key={index} className="item-container">
                 <div className="item-child d-flex flex-column justify-content-center align-items-center">
-                  <div className="header d-flex flex-column justify-content-center align-items-center"
-                       style={{backgroundColor: val.color}}>
+                  <div className="header d-flex flex-column justify-content-center align-items-center">
                     {
                       val.title.map((title, titleKey) => (
                         <h6 key={titleKey} className="title">{title}</h6>
