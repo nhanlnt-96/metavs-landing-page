@@ -34,14 +34,14 @@ const updateAccountRequestRight = (payload) => {
 export const connectRight = () => {
   return async (dispatch) => {
     dispatch(connectRequestRight());
-    const abiResponse = await fetch("/config/abi.json", {
+    const abiResponse = await fetch("/config/abiRight.json", {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
     });
     const abi = await abiResponse.json();
-    const configResponse = await fetch("/config/config.json", {
+    const configResponse = await fetch("/config/configRight.json", {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
