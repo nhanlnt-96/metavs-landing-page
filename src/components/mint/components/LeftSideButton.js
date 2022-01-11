@@ -93,7 +93,7 @@ const LeftSideButton = () => {
   };
   
   const getConfig = async () => {
-    const configResponse = await fetch("/config/config.json", {
+    const configResponse = await fetch("/config/configLeft.json", {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
