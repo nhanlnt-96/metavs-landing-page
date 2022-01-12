@@ -25,7 +25,6 @@
 
     .contact-direct {
       .contact-item, .email-item {
-        font-family: TTOctoSquaresMedium, sans-serif;
         font-size: 1.5rem;
         @include smallScreen{
           font-size: 1.2rem;

@@ -33,7 +33,6 @@
   &-title {
     font-size: 7vw;
     text-align: center;
-    font-family: TTOctoSquaresMedium, sans-serif;
     line-height: 8vw;
     @include mobile {
       font-size: 8vw;
@@ -44,7 +43,6 @@
     h4 {
       text-align: center;
       font-size: 2vw;
-      font-family: MuliBold, sans-serif;
       line-height: 3vw;
       @include smallScreen {
         line-height: 4vw;
