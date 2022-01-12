@@ -12,6 +12,14 @@
   &-timeline {
     margin-top: $margin-top-primary;
   }
+
+  @include desktop {
+    min-height: unset !important;
+    padding-bottom: 0 !important;
+  }
+  @include wide-desktop {
+    min-height: 100vh;
+  }
 }
 
 .roadmap-comp-timeline .items {
@@ -19,13 +27,7 @@
   min-height: 900px;
 
   .item-container {
-    flex: 1;
-    padding-left: 0;
-    padding-right: 0;
-
     .item-child {
-      padding: 0 10px;
-
       .header {
         border-radius: 20px;
         padding: 20px 10px;
@@ -36,7 +38,6 @@
         .title {
           color: #ffffff;
           text-align: center;
-          font-family: MainFont, sans-serif;
           font-size: 2.5rem;
           font-weight: bolder;
 
@@ -56,9 +57,7 @@
         min-height: 300px;
 
         .detail {
-          font-family: "Kanit", sans-serif;
-          font-weight: bold;
-          font-size: 1.8rem;
+          font-size: 1.7rem;
 
           &:not(:last-child) {
             margin-bottom: $margin-top-secondary;
@@ -94,6 +93,18 @@
         display: unset;
         align-self: unset;
       }
+    }
+    @include desktop {
+      flex-wrap: wrap;
+      flex: unset;
+      width: 50%;
+      &:nth-child(even) {
+        display: unset;
+        align-self: unset;
+      }
+    }
+    @include wide-desktop {
+      flex: 1;
     }
   }
 }
